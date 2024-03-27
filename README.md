@@ -9,6 +9,12 @@ Query for the countries with the most invoices.
 Query output for the best customer i.e. the customer who spent the most on the music records.
 <img width="688" alt="image" src="https://github.com/pratt12/Music_store_proj/assets/69366735/f1460693-8562-458f-83ea-b3be81676f87">
 
+The artist with the most rock music in the dataset.
+
+<img width="516" alt="image" src="https://github.com/pratt12/Music_store_proj/assets/69366735/4c4b016b-877d-4f13-9194-0f41aa6b9299">
+I'd have preferred Queen to be the top but Led Zeppelin it is I guess ;)
+
+
 
 
 

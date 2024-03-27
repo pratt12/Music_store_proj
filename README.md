@@ -1,5 +1,6 @@
- Music Store Database with targeted SQL Queries for data analysis using SQL
-An overview of the intricacies of the tables that are used for the data analysis 
+ Music Store Database with targeted SQL Queries for data analysis using SQL.
+ 
+An overview of the intricacies of the tables that are present in the database for the data analysis.
 ![MusicDatabaseSchema](https://github.com/pratt12/Music_store_proj/assets/69366735/36f894af-5ad7-4abd-9bf4-7eebcbff95fe)
 
 Query for the countries with the most invoices. 

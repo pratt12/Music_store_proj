@@ -24,6 +24,10 @@ The most popular Music Genre for each country, this is done using CTE.
 
 <img width="734" alt="image" src="https://github.com/pratt12/Music_store_proj/assets/69366735/9e3f1838-24b9-4c20-86cc-f97eeb179323">
 
+The highest spending customers from each country for the music database.
+<img width="746" alt="image" src="https://github.com/pratt12/Music_store_proj/assets/69366735/97b43075-6c32-476a-8308-6f4d20c8952f">
+
+
 
 
 

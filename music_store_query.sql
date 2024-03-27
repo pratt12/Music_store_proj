@@ -52,21 +52,7 @@ LIMIT 1;
 /* Q1: Write query to return the email, first name, last name, & Genre of all Rock Music listeners. 
 Return your list ordered alphabetically by email starting with A. */
 
-/*Method 1 */
 
-SELECT DISTINCT email,first_name, last_name
-FROM customer
-JOIN invoice ON customer.customer_id = invoice.customer_id
-JOIN invoiceline ON invoice.invoice_id = invoiceline.invoice_id
-WHERE track_id IN(
-	SELECT track_id FROM track
-	JOIN genre ON track.genre_id = genre.genre_id
-	WHERE genre.name LIKE 'Rock'
-)
-ORDER BY email;
-
-
-/* Method 2 */
 
 SELECT DISTINCT email AS Email,first_name AS FirstName, last_name AS LastName, genre.name AS Name
 FROM customer
@@ -142,7 +128,7 @@ the maximum number of purchases is shared return all Genres. */
 
 /* Steps to Solve:  There are two parts in question- first most popular music genre and second need data at country level. */
 
-/* Method 1: Using CTE */
+/* Using CTE */
 
 WITH popular_genre AS 
 (
@@ -159,23 +145,6 @@ WITH popular_genre AS
 SELECT * FROM popular_genre WHERE RowNo <= 1
 
 
-/* Method 2: : Using Recursive */
-
-WITH RECURSIVE
-	sales_per_country AS(
-		SELECT COUNT(*) AS purchases_per_genre, customer.country, genre.name, genre.genre_id
-		FROM invoice_line
-		JOIN invoice ON invoice.invoice_id = invoice_line.invoice_id
-		JOIN customer ON customer.customer_id = invoice.customer_id
-		JOIN track ON track.track_id = invoice_line.track_id
-		JOIN genre ON genre.genre_id = track.genre_id
-		GROUP BY 2,3,4
-		ORDER BY 2
-	),
-	max_genre_per_country AS (SELECT MAX(purchases_per_genre) AS max_genre_number, country
-		FROM sales_per_country
-		GROUP BY 2
-		ORDER BY 2)
 
 SELECT sales_per_country.* 
 FROM sales_per_country
